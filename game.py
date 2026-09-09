@@ -1,7 +1,7 @@
 from goblin import Goblin
 
 
-ARENA_NAME = "The Iron Circle"
+ARENA_NAME = "The Ring of Doom and Despair"
 
 
 def main():
