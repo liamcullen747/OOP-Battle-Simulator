@@ -1,4 +1,5 @@
 from goblin import Goblin
+from hero import Hero
 
 
 ARENA_NAME = "The Ring of Doom and Despair"
@@ -16,6 +17,7 @@ def main():
     goblinTwo = Goblin("Scribble")
 
     print("But no hero has answered the call... yet.")
+    hero = Hero("NAME")
 
 
 if __name__ == "__main__":
