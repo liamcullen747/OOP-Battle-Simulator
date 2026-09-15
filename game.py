@@ -18,7 +18,7 @@ def main():
     print(f"{goblin.name} enters the arena with {goblin.health} health.")
     goblinTwo = Goblin("Scribble")
 
-    hero = Hero("Knight")
+    hero = Hero("Random guy")
     print(f"{hero.name} enters the arena with {hero.health} health!")
     damage, critical_hit = hero.attack()
     goblin.take_damage(damage, critical_hit)
