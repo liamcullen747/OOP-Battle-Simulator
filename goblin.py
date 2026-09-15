@@ -13,10 +13,13 @@ class Goblin:
         """Return a random amount of damage."""
         return random.randint(1, self.attack_power)
 
-    def take_damage(self, damage):
+    def take_damage(self, damage, critical_hit=False):
         """Reduce health without allowing it to fall below zero."""
         self.health = max(0, self.health - damage)
-        print(f"{self.name} takes {damage} damage. Health: {self.health}")
+        if critical_hit:
+            print(f"Critical hit! {self.name} takes {damage} damage. Health: {self.health}")
+        else:
+            print(f"{self.name} takes {damage} damage. Health: {self.health}")
 
     def is_alive(self):
         """Return True while the goblin has health remaining."""

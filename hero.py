@@ -2,14 +2,20 @@ import random
 class Hero:
     def __init__(self,name):
         self.name = name
-        self.health = 100
-        self.atkpower = 10
+        self.health = 125
+        self.atkpower = 20
     
     def attack(self):
-        damage = random.randint(0,self.atkpower)
-        return damage
+        chance = random.randint(1,5)
+        if chance == 1:
+            damage = random.randint(self.atkpower, self.atkpower * 2)
+            critical_hit = True
+        else:
+            damage = random.randint(0,self.atkpower)
+            critical_hit = False
+        return damage, critical_hit
     def take_damage(self, damage):
         self.health = max(0,self.health - damage)
-        print("put dmg stuff here")
+        print(f"{self.name} takes {damage} damage. Health: {self.health}")
     def is_alive(self):
         return self.health > 0
