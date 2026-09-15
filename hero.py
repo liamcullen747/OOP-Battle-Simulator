@@ -3,15 +3,15 @@ class Hero:
     def __init__(self,name):
         self.name = name
         self.health = 125
-        self.atkpower = 20
+        self.attack_power = 20
     
     def attack(self):
         chance = random.randint(1,5)
         if chance == 1:
-            damage = random.randint(self.atkpower, self.atkpower * 2)
+            damage = random.randint(self.attack_power, self.attack_power * 2)
             critical_hit = True
         else:
-            damage = random.randint(0,self.atkpower)
+            damage = random.randint(0,self.attack_power)
             critical_hit = False
         return damage, critical_hit
     def take_damage(self, damage):
